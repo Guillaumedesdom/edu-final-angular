@@ -1,0 +1,24 @@
+.d-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+.justify-content-between {
+    justify-content: space-between;
+}
+.justify-content-center {
+    justify-content: center;
+}
+.frame-50 {
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+.product-container {
+    margin-left: 5em;
+    margin-right: 2em;
+}
+.product-img {
+    width: 100px;
+    height: 100px;
+    background-color: gray;
+}

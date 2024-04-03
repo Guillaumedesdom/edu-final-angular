@@ -1,0 +1,9 @@
+<div *ngIf="product" class="row d-flex justify-content-between frame-50">
+    <p>Product {{product.id}}</p>
+    <div class="product-img">
+    </div>
+    <div class="d-flex justify-content-end">
+        <button type="button" (click)="add()">Add to cart</button>
+        <button routerLink="/products">Explore more products</button>
+    </div>
+</div>

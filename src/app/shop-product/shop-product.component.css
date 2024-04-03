@@ -1,0 +1,30 @@
+.d-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+.row {
+    flex-direction: column;
+}
+.justify-content-between {
+    justify-content: space-between;
+}
+.justify-content-center {
+    justify-content: center;
+}
+.justify-content-end {
+    justify-content: end;
+}
+.frame-50 {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+.product-container {
+    margin-left: 5em;
+    margin-right: 2em;
+}
+.product-img {
+    width: 400px;
+    height: 400px;
+    background-color: gray;
+}

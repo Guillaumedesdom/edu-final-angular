@@ -1,0 +1,31 @@
+<div class="d-flex justify-content-center">
+    <h1>Search for products</h1>
+    <!-- Boucle for de Angular 17 -->
+    <!-- <ul>
+        @for(product of products; track product.id){
+            <li>
+                <p>Product {{product.id}}</p>
+                <div class="product-img">
+                </div>
+                <button type="button">Buy</button>
+            </li>
+        }
+    </ul> -->
+    <!-- Boucle for de Angular 8 -->
+    <div class="d-flex justify-content-between frame-50">
+        <div *ngFor="let product of products" class="product-container">
+            <p>Product {{product.id}}</p>
+            <div class="product-img">
+            </div>
+            <button type="button" (click)="buy(product.id)">Buy</button>
+        </div>
+    </div>
+    <!-- <ul>
+        <li *ngFor="let product of products">
+            <p>Product {{product.id}}</p>
+            <div class="product-img">
+            </div>
+            <button type="button">Buy</button>
+        </li>
+    </ul> -->
+</div>
