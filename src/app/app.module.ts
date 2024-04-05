@@ -13,6 +13,7 @@ import { CartComponent } from './cart/cart.component';
 import { ShopProductComponent } from './shop-product/shop-product.component';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatButtonModule } from '@angular/material/button';
+import { NavComponent } from './nav/nav.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { MatButtonModule } from '@angular/material/button';
     HomeComponent,
     ProfileComponent,
     CartComponent,
-    ShopProductComponent
+    ShopProductComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,

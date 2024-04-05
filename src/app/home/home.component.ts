@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
-import { CartComponent } from '../cart/cart.component';
-// import { Routes, RouterModule } from "@angular/router";
+import { ProductService } from '../product/product.service';
+
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent {
+export class HomeComponent{
+  constructor(private _productService: ProductService) {
+  }
 
 }
