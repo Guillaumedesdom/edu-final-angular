@@ -3,7 +3,9 @@
         <h1 class="title">Welcome to Edu Final</h1>
     </div>
     <div class="toolbar-container">
-        <button class="btn btn-info" routerLink="/products">Search</button>
-        <mat-icon svgIcon="shopping-cart" aria-hidden="false" aria-label="Shopping cart SVG icon" [matBadge]="counter" matBadgeColor="warn"></mat-icon>
+        <button mat-flat-button color="primary" routerLink="/products" style="margin-right: 5%;">Search</button>
+        <button mat-icon-button color="primary">
+            <mat-icon svgIcon="shopping-cart" aria-hidden="false" aria-label="Shopping cart SVG icon" [matBadge]="counter" matBadgeColor="warn"></mat-icon>
+        </button>
     </div>
 </div>

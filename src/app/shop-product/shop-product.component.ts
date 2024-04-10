@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, OnInit, AfterViewInit} from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ProductService } from '../product/product.service';
+import { LoaderService } from '../loader/loader.service';
 
 type Product = {
   albumId: number,
@@ -14,13 +15,16 @@ type Product = {
   templateUrl: './shop-product.component.html',
   styleUrl: './shop-product.component.css'
 })
-export class ShopProductComponent implements OnInit{
+export class ShopProductComponent implements OnInit, AfterViewInit{
   id: number | null = null;
   product: Product | null = null;
-  constructor(private route: ActivatedRoute, private _productService: ProductService){}
+  constructor(private route: ActivatedRoute, private _router: Router, private _productService: ProductService, private _loaderService: LoaderService){}
   ngOnInit(): void {
     this.id = Number(this.route.snapshot.paramMap.get('id'));
     this._getProduct();
+  }
+  ngAfterViewInit(): void {
+      this._loaderService.setloadingScreenState(false);
   }
   private _getProduct(){
     if(this.id===null) return;
