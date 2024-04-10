@@ -14,6 +14,8 @@ import { ShopProductComponent } from './shop-product/shop-product.component';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatButtonModule } from '@angular/material/button';
 import { NavComponent } from './nav/nav.component';
+import { LoaderComponent } from './loader/loader.component';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { NavComponent } from './nav/nav.component';
     ProfileComponent,
     CartComponent,
     ShopProductComponent,
-    NavComponent
+    NavComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +34,8 @@ import { NavComponent } from './nav/nav.component';
     MatSlideToggleModule,
     MatIconModule,
     MatBadgeModule,
-    MatButtonModule
+    MatButtonModule,
+    MatProgressSpinnerModule
   ],
   providers: [
     provideClientHydration(),

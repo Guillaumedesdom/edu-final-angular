@@ -1,1 +1,7 @@
-<p>cart works</p>
+<div *ngFor="let prod of products">
+    <div class="prod-card">
+        <div>Product {{prod?.id}}</div>
+        <div><img src="{{prod?.url}}"></div>
+    </div>
+</div>
+<button type="button">Complete order</button>

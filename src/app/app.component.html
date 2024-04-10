@@ -1,6 +1,9 @@
-<nav id="nav-section" style="background-color: white;">
+<nav id="nav-section" style="background-color: white; height: fit-content;">
     <app-nav></app-nav>
 </nav>
+<section *ngIf="fadedFullScreenLoaderFlag">
+    <app-loader></app-loader>
+</section>
 <section id="router-section">
     <router-outlet/>
 </section>

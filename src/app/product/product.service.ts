@@ -16,11 +16,12 @@ const BASE_URL_PHOTOS: string = 'https://jsonplaceholder.typicode.com/photos';
 })
 export class ProductService {
   counter: number = 0;
-  products: Array<{}> = [];
-  private _tokenProviderSubject: BehaviorSubject<number>;
-  public tokenProviderObservable$: Observable<number>;
+  products: Array<Product> = [];
+  
+  private _tokenProviderSubject: BehaviorSubject<{counter: number, id: number}>;
+  public tokenProviderObservable$: Observable<{counter: number, id: number}>;
   constructor(private http: HttpClient) {
-    this._tokenProviderSubject = new BehaviorSubject(0);
+    this._tokenProviderSubject = new BehaviorSubject({counter: 0, id: -1});
     this.tokenProviderObservable$ = this._tokenProviderSubject.asObservable();
   }
   getProducts(): Observable<Product[]>{
@@ -34,6 +35,6 @@ export class ProductService {
     this.getProduct(id).subscribe((data)=>{
       this.products.push(data);
     });
-    this._tokenProviderSubject.next(this.counter);
+    this._tokenProviderSubject.next({counter: this.counter, id: id});
   }
 }
