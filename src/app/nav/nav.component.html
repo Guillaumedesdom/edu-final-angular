@@ -4,7 +4,7 @@
     </div>
     <div class="toolbar-container">
         <button mat-flat-button color="primary" routerLink="/products" style="margin-right: 5%;">Search</button>
-        <button mat-icon-button color="primary">
+        <button mat-icon-button color="primary" (click)="checkout()">
             <mat-icon svgIcon="shopping-cart" aria-hidden="false" aria-label="Shopping cart SVG icon" [matBadge]="counter" matBadgeColor="warn"></mat-icon>
         </button>
     </div>

@@ -3,7 +3,19 @@
     box-shadow: blanchedalmond;
     border-color: black;
     margin-bottom: 20px;
+    width: fit-content;
     :hover{
         cursor: pointer
     }
+}
+.d-flex {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.justify-content-between {
+    justify-content: space-between;
+}
+.justify-content-center {
+    justify-content: center;
 }
