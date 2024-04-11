@@ -25,6 +25,7 @@ export class NavComponent implements OnInit{
   }
 
   public checkout(){
+    console.log('checkout cart');
     this._router.navigate(['/checkout']);
   }
 

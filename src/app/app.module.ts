@@ -16,6 +16,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { NavComponent } from './nav/nav.component';
 import { LoaderComponent } from './loader/loader.component';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { LoginComponent } from './login/login.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     CartComponent,
     ShopProductComponent,
     NavComponent,
-    LoaderComponent
+    LoaderComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +38,8 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     MatIconModule,
     MatBadgeModule,
     MatButtonModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    FormsModule
   ],
   providers: [
     provideClientHydration(),

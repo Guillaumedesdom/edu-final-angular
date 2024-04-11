@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../product/product.service';
+import { LoaderService } from '../loader/loader.service';
 
 type Product = {
   albumId: number,
   id: number,
   title: string,
-  thumbnailUrl: string
+  thumbnailUrl: string,
 };
 
 @Component({
@@ -15,7 +16,7 @@ type Product = {
 })
 export class CartComponent implements OnInit{
   public products: Array<Product> = [];
-  constructor(private _productService: ProductService) {
+  constructor(private _productService: ProductService, private _loaderService: LoaderService) {
   }
 
   private _subscribeToProducts (){
@@ -35,6 +36,7 @@ export class CartComponent implements OnInit{
     });
   }
   ngOnInit(): void {
+    this._loaderService.setloadingScreenState(false);
     this.products = this._productService.products;
   }
 }
