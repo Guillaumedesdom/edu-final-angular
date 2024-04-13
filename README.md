@@ -8,3 +8,5 @@ This repo contains my implementation of this exercice based on the elements prov
 - Angular Material
 # Bibliography
 - [Zero to Hero in Front-End Development with Angular's course](https://www.educative.io/path/zero-to-hero-in-front-end-development-with-angular)
+- [Angular](https://angular.io/)
+- [Angular Material](https://material.angular.io/components/icon/overview)
